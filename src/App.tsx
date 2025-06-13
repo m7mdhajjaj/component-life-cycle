@@ -40,4 +40,14 @@ vidio 3  explain of the component life cycle (render)
      render is used to return the JSX that will be rendered to the DOM
      render is called every time the state or props change
 */
+/*
+vidio 4  explain of the component life cycle (componentDidMount)
+      componentDidMount is called after the component is rendered to the DOM
+      componentDidMount is called only once when the component is created during the mounting phase
+      componentDidMount is used to perform any side effects, such as fetching data from an API or setting up event listeners
+      componentDidMount is called after the render method is called
+      componentDidMount is called after the component is rendered to the DOM
+      componentDidMount is called only once when the component is created during the mounting phase
+      componentDidMount is used to perform any side effects, such as fetching data from an API or setting up event listeners
+*/
 export default App;

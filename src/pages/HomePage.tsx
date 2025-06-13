@@ -13,7 +13,15 @@ class HomePage extends Component<Iprops, Istate> {
     }
     console.log("constructor called #1");
   }
-
+  componentDidMount() {
+    console.log("componentDidMount called #3");
+    fetch("https://fakestoreapi.com/products")
+      .then((response) => response.json())
+        .then((data) => {
+            this.setState({products: data});
+            console.log("Products fetched:", data);
+        })
+  }
   render() {
     console.log("render called #2");
     return <div className="home-page">
@@ -33,4 +41,3 @@ class HomePage extends Component<Iprops, Istate> {
     // here we are using the constructor to initialize the state
     // constructor is called only once when the component is created during the mounting phase 
     // constructor is used to initialize the state and bind the methods
-        
