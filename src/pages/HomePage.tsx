@@ -25,6 +25,11 @@ class HomePage extends Component<Iprops, Istate> {
   componentDidUpdate() {
     console.log("componentDidUpdate called ");
   }
+  componentWillUnmount(): void {
+      
+    console.log("componentWillUnmount called #4");
+    // Cleanup code can go here, like removing event listeners or cancelling API requests
+  }
   render() {
     console.log("render called #2");
     return <div className="home-page">

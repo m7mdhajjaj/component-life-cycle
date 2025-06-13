@@ -14,7 +14,7 @@ class Contact extends Component {
   }
 
   render() {
-    return <div className="Contact-page"></div>;
+    return <div className="Contact-page"> hello contact</div>;
   }
 }
 

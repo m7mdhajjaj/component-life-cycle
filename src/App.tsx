@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
 function App() {
-
+  const [page, setPage] = useState("home");
   return (
     <div
       mx-auto
@@ -13,17 +13,14 @@ function App() {
       <h1 className="text-3xl font-bold underline  text-center ">
         compnent life cycle
       </h1>
-      <Navbar />
+      <Navbar setPage={setPage} />
       <div className="container mx-auto p-4">
-        <HomePage />
-
-        <About />
-        <Contact />
-        </div>
+        {page === "home" && <HomePage />}
+        {page === "about" && <About />}
+        {page === "contact" && <Contact />}
+      </div>
     </div>
   );
-  
-  
 }
 
 /*
@@ -46,9 +43,6 @@ vidio 4  explain of the component life cycle (componentDidMount)
       componentDidMount is called only once when the component is created during the mounting phase
       componentDidMount is used to perform any side effects, such as fetching data from an API or setting up event listeners
       componentDidMount is called after the render method is called
-      componentDidMount is called after the component is rendered to the DOM
-      componentDidMount is called only once when the component is created during the mounting phase
-      componentDidMount is used to perform any side effects, such as fetching data from an API or setting up event listeners
 */
 // vidio 5  explain of the component life cycle (componentDidUpdate)
 /*
@@ -56,5 +50,8 @@ vidio 4  explain of the component life cycle (componentDidMount)
       componentDidUpdate is called every time the component is updated
       componentDidUpdate is used to perform any side effects, such as fetching data from an API or setting up event listeners
       */
- 
+/*
+vidio 6  explain of the component life cycle (componentWillUnmount)
+      componentWillUnmount is called before the component is removed from the DOM
+      */
 export default App;

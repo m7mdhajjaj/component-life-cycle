@@ -1,16 +1,34 @@
+const navbar = ({ setPage }: { setPage: (page: string) => void }) => {
+  return (
+    <nav className="bg-gradient-to-r from-purple-800 to-indigo-900 shadow-lg">
+      
 
-const navbar = () => {
-    return (
-        <nav className="bg-gray-800 p-4">
-        <div className="container mx-auto flex justify-between items-center">
-            <div className="text-white text-lg font-bold">My App</div>
-            <ul className="flex space-x-4">
-            <li><a href="/" className="text-white hover:text-gray-300">Home</a></li>
-            <li><a href="/about" className="text-white hover:text-gray-300">About</a></li>
-            <li><a href="/contact" className="text-white hover:text-gray-300">Contact</a></li>
-            </ul>
-        </div>
-        </nav>
-    );
-    }
+          <ul className="flex items-center space-x-6">
+            <li
+              onClick={() => setPage("home")}
+              className="text-indigo-100 hover:text-white transition-colors duration-200 font-medium cursor-pointer underline decoration-2 decoration-transparent hover:decoration-indigo-400 py-1">
+              Home
+            </li>
+            <li
+              onClick={() => setPage("about")}
+              className="text-indigo-100 hover:text-white transition-colors duration-200 font-medium cursor-pointer underline decoration-2 decoration-transparent hover:decoration-indigo-400 py-1">
+              About
+            </li>
+            <li
+              onClick={() => setPage("contact")}
+              className="text-indigo-100 hover:text-white transition-colors duration-200 font-medium cursor-pointer underline decoration-2 decoration-transparent hover:decoration-indigo-400 py-1">
+              Contact
+            </li>
+            <li>
+              <button
+                className="bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-md shadow-sm font-medium transition duration-200 ml-2"
+                onClick={() => setPage("signup")}>
+                Sign Up
+              </button>
+            </li>
+          </ul>
+    </nav>
+  );
+};
+
 export default navbar;
