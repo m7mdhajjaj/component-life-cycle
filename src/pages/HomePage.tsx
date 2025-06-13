@@ -11,13 +11,16 @@ class HomePage extends Component<Iprops, Istate> {
         counter : 0,
         products: []
     }
-    console.log("constructor called");
+    console.log("constructor called #1");
   }
 
   render() {
-    console.log("render called");
+    console.log("render called #2");
     return <div className="home-page">
         <h2>counter : {this.state.counter}</h2>
+        <button onClick={() => this.setState({counter: this.state.counter + 1})}>
+            Increment Counter
+        </button>
     </div>;
   }
 }
@@ -30,3 +33,4 @@ class HomePage extends Component<Iprops, Istate> {
     // here we are using the constructor to initialize the state
     // constructor is called only once when the component is created during the mounting phase 
     // constructor is used to initialize the state and bind the methods
+        

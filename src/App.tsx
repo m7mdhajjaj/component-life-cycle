@@ -16,6 +16,7 @@ function App() {
       <Navbar />
       <div className="container mx-auto p-4">
         <HomePage />
+
         <About />
         <Contact />
         </div>
@@ -31,5 +32,12 @@ mounting phase (constructor, render, componentDidMount )
      here we are using the constructor to initialize the state
      constructor is called only once when the component is created during the mounting phase 
      constructor is used to initialize the state and bind the methods
+*/
+/*
+vidio 3  explain of the component life cycle (render)
+     render is called every time the state or props change
+     render is called after the constructor and before the componentDidMount
+     render is used to return the JSX that will be rendered to the DOM
+     render is called every time the state or props change
 */
 export default App;
