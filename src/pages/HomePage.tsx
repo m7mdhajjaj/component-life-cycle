@@ -22,6 +22,9 @@ class HomePage extends Component<Iprops, Istate> {
             console.log("Products fetched:", data);
         })
   }
+  componentDidUpdate() {
+    console.log("componentDidUpdate called ");
+  }
   render() {
     console.log("render called #2");
     return <div className="home-page">

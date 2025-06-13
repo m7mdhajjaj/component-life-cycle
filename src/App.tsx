@@ -50,4 +50,11 @@ vidio 4  explain of the component life cycle (componentDidMount)
       componentDidMount is called only once when the component is created during the mounting phase
       componentDidMount is used to perform any side effects, such as fetching data from an API or setting up event listeners
 */
+// vidio 5  explain of the component life cycle (componentDidUpdate)
+/*
+      componentDidUpdate is called after the component is updated
+      componentDidUpdate is called every time the component is updated
+      componentDidUpdate is used to perform any side effects, such as fetching data from an API or setting up event listeners
+      */
+ 
 export default App;
