@@ -70,5 +70,25 @@ vidio 8  explain of the component life cycle (useEffect with dependencies)
       useEffect with dependencies is a hook that allows you to perform side effects in functional components
       todo : [] is an empty array, which means that the effect will only run once when the component mounts
      todo : [counter] is an array with a single dependency, which means that the effect will run every time the counter changes
+     todo if without parameters useEffect will run after every render
       */
+// vidio 9  explain of the component life cycle (useEffect with cleanup function)
+/*
+      useEffect with cleanup function is a hook that allows you to perform side effects in functional components
+      useEffect with cleanup function is used to perform any side effects, such as fetching data from an API or setting up event listeners
+      منستعملو في حال المستخدم عمل طلب لصفحه ثم غير رايو وبدو يروح عصفحه تانيه والصفحه الاولى لساها موجوده في الذاكره
+      */
+/*
+Abort Controller (Request Cancelation)
+      AbortController is a built-in JavaScript API that allows you to cancel a fetch request
+      AbortController is used to cancel a fetch request when the component unmounts or when the user navigates away from the page
+      AbortController is used to prevent memory leaks and unnecessary network requests
+      TODO : const controller = new AbortController();
+            const signal = controller.signal;
+            fetch("https://fakestoreapi.com/products",{signal})
+            .then((response) => response.json())
+            .then((data) => {
+                setProducts(data);
+            });
+      */     
 export default App;

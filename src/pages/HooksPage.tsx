@@ -11,7 +11,10 @@ const HomePage = () => {
     useEffect(() => {
         console.log("Counter value changed:", counter);
         // This effect will run every time the counter changes
-        
+        return () => {
+            console.log("Cleanup for counter change effect");
+            // This cleanup function will run before the next effect runs or when the component unmounts
+        };
     }, [counter]);
 
 
