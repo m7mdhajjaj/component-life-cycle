@@ -26,6 +26,11 @@ const navbar = ({ setPage }: { setPage: (page: string) => void }) => {
                 Sign Up
               </button>
             </li>
+            <li
+            onClick={() => setPage("HooksPage")}
+              className="text-indigo-100 hover:text-white transition-colors duration-200 font-medium cursor-pointer underline decoration-2 decoration-transparent hover:decoration-indigo-400 py-1">
+              HooksPage
+            </li>
           </ul>
     </nav>
   );

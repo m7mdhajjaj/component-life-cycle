@@ -4,6 +4,7 @@ import Navbar from "./component/navbar.tsx";
 import HomePage from "./pages/HomePage.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.tsx";
+import HooksPage from "./pages/HooksPage.tsx";
 function App() {
   const [page, setPage] = useState("home");
   return (
@@ -18,6 +19,7 @@ function App() {
         {page === "home" && <HomePage />}
         {page === "about" && <About />}
         {page === "contact" && <Contact />}
+        {page === "HooksPage" && <HooksPage />}
       </div>
     </div>
   );
@@ -35,7 +37,6 @@ vidio 3  explain of the component life cycle (render)
      render is called every time the state or props change
      render is called after the constructor and before the componentDidMount
      render is used to return the JSX that will be rendered to the DOM
-     render is called every time the state or props change
 */
 /*
 vidio 4  explain of the component life cycle (componentDidMount)
@@ -54,4 +55,12 @@ vidio 4  explain of the component life cycle (componentDidMount)
 vidio 6  explain of the component life cycle (componentWillUnmount)
       componentWillUnmount is called before the component is removed from the DOM
       */
+/*
+vidio 7  explain of the component life cycle (useEffect)
+      useEffect is a hook that allows you to perform side effects in functional components
+        TODO useEffect( ()=>{
+              console.log("useEffect called ");
+          });
+         ! here without parameters useEffect will run after every render
+      */     
 export default App;
