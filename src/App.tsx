@@ -62,5 +62,13 @@ vidio 7  explain of the component life cycle (useEffect)
               console.log("useEffect called ");
           });
          ! here without parameters useEffect will run after every render
-      */     
+      */   
+     
+         
+/*
+vidio 8  explain of the component life cycle (useEffect with dependencies)
+      useEffect with dependencies is a hook that allows you to perform side effects in functional components
+      todo : [] is an empty array, which means that the effect will only run once when the component mounts
+     todo : [counter] is an array with a single dependency, which means that the effect will run every time the counter changes
+      */
 export default App;

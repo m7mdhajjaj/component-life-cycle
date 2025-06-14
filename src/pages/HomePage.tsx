@@ -11,7 +11,7 @@ class HomePage extends Component<Iprops, Istate> {
         counter : 0,
         products: []
     }
-    console.log("constructor called #1");
+    //console.log("constructor called #1");
   }
   componentDidMount() {
     console.log("componentDidMount called #3");
@@ -19,19 +19,19 @@ class HomePage extends Component<Iprops, Istate> {
       .then((response) => response.json())
         .then((data) => {
             this.setState({products: data});
-            console.log("Products fetched:", data);
+           // console.log("Products fetched:", data);
         })
   }
   componentDidUpdate() {
-    console.log("componentDidUpdate called ");
+    //console.log("componentDidUpdate called ");
   }
   componentWillUnmount(): void {
       
-    console.log("componentWillUnmount called #4");
+   // console.log("componentWillUnmount called #4");
     // Cleanup code can go here, like removing event listeners or cancelling API requests
   }
   render() {
-    console.log("render called #2");
+    //console.log("render called #2");
     return <div className="home-page">
         <h2>counter : {this.state.counter}</h2>
         <button onClick={() => this.setState({counter: this.state.counter + 1})}>

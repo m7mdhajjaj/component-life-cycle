@@ -4,7 +4,16 @@ const HomePage = () => {
     
     useEffect( ()=>{
         console.log("useEffect called ");
-    });
+    }, []);
+    // This useEffect will run only once when the component mounts
+    console.log("hookspage component rendered");
+    // This console log will run every time the component renders
+    useEffect(() => {
+        console.log("Counter value changed:", counter);
+        // This effect will run every time the counter changes
+        
+    }, [counter]);
+
 
   return (
     <div className="home-page">
